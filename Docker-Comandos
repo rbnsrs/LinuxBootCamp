@@ -1,0 +1,14 @@
+#Conforme o exemplo, vamos usar um container que irá rodar aplicação php no servidor apache
+#O Docker já deve estar instalado na máquina que irá rodar os containers.
+
+#Realizando Download da imagem com Apache e PHP.
+docker pull php:7.4.30-apache
+
+#Criando um container
+docker run -p 80:80 -d php:7.4.30-apache
+
+#Copiando arquivos do diretório local da máquina para o container
+docker cp index.php <idDoContainer:/var/www/html>
+
+
+
