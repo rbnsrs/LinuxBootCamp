@@ -1,0 +1,11 @@
+#Como a aplicação está rodando local, deixei somente o template que segui do curso.
+
+version: '1.0'
+services:
+    apache:
+        image: httpd:latest
+        container_name: apache-app-desafio
+        ports:
+        - '80:80'
+        volumes:
+        - ./website:/usr/local/apache2/htdocs
